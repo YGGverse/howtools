@@ -46,7 +46,7 @@ fi
 
 # Compare versions
 if [[ ${LocalSHA256:0:64} == ${RemoteSHA256:0:64} ]]; then
-  echo "DB up to date!"
+  echo "DB is up to date!"
   exit
 fi
 
