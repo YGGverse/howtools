@@ -33,7 +33,7 @@ wget $RemoteSHA256URL -O $RemoteSHA256TMP
 RemoteSHA256=$(<$RemoteSHA256TMP)
 
 if ! [[ ${RemoteSHA256:0:64} =~ ^([0-9a-f]{64})$ ]]; then
-  echo Invalid remote SHA-256
+  echo "Invalid remote SHA-256"
   exit
 fi
 
@@ -69,7 +69,7 @@ fi
 
 # Check for download contain valid SHA-256
 if ! [[ ${LocalSHA256:0:64} =~ ^([0-9a-f]{64})$ ]]; then
-  echo Invalid local SHA-256
+  echo "Invalid local SHA-256"
   exit
 fi
 
